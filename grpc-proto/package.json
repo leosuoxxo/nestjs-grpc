@@ -1,0 +1,17 @@
+{
+  "name": "gprc-proto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "proto:book": "protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto -I=../grpc-proto/proto --ts_proto_out=../apps/grpc ../grpc-proto/proto/book.proto --ts_proto_opt=nestJs=true --ts_proto_opt=fileSuffix=.pb",
+    "proto:all": "npm run proto:book"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-proto": "^1.125.0"
+  }
+}
